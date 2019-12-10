@@ -1,0 +1,14 @@
+const noob = () => {}
+
+export default (query, callback = noob) => {
+	const mq = window.matchMedia(query)
+
+	const updateMatches = (mq) => {
+		callback(mq.matches)
+	}
+	
+	updateMatches(mq)
+	mq.addListener(foo);
+	
+	return mq.matches
+}
